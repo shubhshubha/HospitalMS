@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400;1,500;1,700&display=swap');   
+
+body{
+    font-family: "Roboto",sans-serif;
+    /* overflow: hidden; */
+}
+#navbarSupportedContent ul li a{
+    color: white;
+    font-size: 1.3rem;
+}
+.navbar-expand-lg .navbar-nav .nav-link.active, .navbar-expand-lg .navbar-nav .show>.nav-link {
+    background: -webkit-linear-gradient(#010e11, hwb(223 3% 2%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+.float-bg{
+    background-color:#018cb0;
+}
+.float{
+    animation: float 10s ease-in infinite;
+}
+@keyframes float {
+    0%,100%{
+      scale: 1;
+      transform: translateX(0px);
+    }
+    50%{
+     scale: 1.3;
+    }
+    
+}
+.overflow-hidden a{ 
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fff;
+   margin-top: 5px;
+   margin-bottom: 5px;
+    margin-right: 40px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #fff;
+    -webkit-box-reflect:below -10px linear-gradient(transparent,#0002);
+    transition: 0.5s;  
+    transition-delay: 0s;
+  }
+  .overflow-hidden a:hover{
+    transition-delay: 1.5s;
+    color: #000;
+    /* box-shadow: 0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff,
+                0 0 80px #fff,
+                0 0 160px #fff; */
+  }
+  .overflow-hidden a span{
+    position: relative;
+    z-index: 100;
+  }
+  /* .overflow-hidden a:nth-child(2){
+    filter: hue-rotate(80deg);
+  } */
+  .overflow-hidden a::before{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    box-shadow: 5px -8px 0 #fff,5px 8px 0 #fff;
+    transition:width 0.5s,left 0.5s,height 0.5s,box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+  }
+  .overflow-hidden a:hover::before{
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0 0 #fff,5px 0 0 #fff;
+    transition-delay: 0s,0.5s,1s,1s;
+  }
+  .overflow-hidden a::after{
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    box-shadow: -5px -8px 0 #fff,-5px 8px 0 #fff;
+    transition:width 0.5s,left 0.5s,height 0.5s,box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+  }
+  .overflow-hidden a:hover::after{
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0 0 #fff,-5px 0 0 #fff;
+    transition-delay: 0s,0.5s,1s,1s;
+  }
+.overflow-hidden {
+    overflow: hidden;
+   }
+   
+   .drop-in {
+    animation: drop-in 1s ease 200ms backwards;
+   }
+   
+   .drop-in-2 {
+    animation: drop-in 1600ms ease 800ms backwards;
+   }
+   
+   @keyframes drop-in {
+    from {
+     opacity: 0;
+     transform: translateY(-100px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
+   }
+   
